@@ -24,6 +24,6 @@ With  Crash_Report AS (
         POINT_OF_IMPACT,
         VEHICLE_DAMAGE,
         VEHICLE_DAMAGE_1
-      FROM data-engineering-learn.dbtcore_project.Crash_Report
+      FROM data-engineering-learn.dbtcore_project.MotorVehicleCollision
      )
 Select * from Crash_Report

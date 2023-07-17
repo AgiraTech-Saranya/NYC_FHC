@@ -10,7 +10,7 @@ WITH
         Status_Code,
         SHL_Expiration_Date
       FROM
-        NYC_FHT_VehicleInsurance.SHL_Driver
+        data-engineering-learn.dbtcore_project.SHL_Driver
         ),
  MedallianDriver_Active AS (
       SELECT
@@ -20,7 +20,7 @@ WITH
         Expiration_Date,
         Type
       FROM
-        NYC_FHT_VehicleInsurance.MedallianDriver_active ),
+        data-engineering-learn.dbtcore_project.MedallianDriver_active ),
 
  FleetInfo AS (
       SELECT
@@ -37,7 +37,7 @@ WITH
         VEHICLE_YEAR,
         VEHICLE_OWNERSHIP_TYPE
       FROM
-       NYC_FHT_VehicleInsurance.FleetInformation ),
+       data-engineering-learn.dbtcore_project.FleetInformation ),
    Crash_Report AS (
       SELECT
         FID as CrashReport_FID,
@@ -62,7 +62,7 @@ WITH
         POINT_OF_IMPACT,
         VEHICLE_DAMAGE,
         VEHICLE_DAMAGE_1
-      FROM NYC_FHT_VehicleInsurance.MotorVehicleCollision
+      data-engineering-learn.dbtcore_project.MotorVehicleCollision
      ),
 FieldTrip AS (
       SELECT
@@ -71,7 +71,7 @@ FieldTrip AS (
         VendorID as FieldTrip_VendorID,
         tpep_pickup_date
       FROM
-        NYC_FHT_VehicleInsurance.FieldTrip
+        data-engineering-learn.dbtcore_project.FieldTrip
          ),
 VisionZeroBase as
   (
@@ -83,7 +83,7 @@ VisionZeroBase as
       GREEN_TAXI_SERVICE	  ,	
       AFFILIATED_VEHICLES		
     from 
-      NYC_FHT_VehicleInsurance.VisionZeroBase
+      data-engineering-learn.dbtcore_project.VisionZeroBase
   ),
 
   VehicleIns as
@@ -100,7 +100,7 @@ VisionZeroBase as
         AgentName as VehicleIns_VENDOR_NAME
     
       from
-          NYC_FHT_VehicleInsurance.VehicleInspection
+          data-engineering-learn.dbtcore_project.VehicleInspection
   ),
  final as (
         select * from SHL_Driver S
