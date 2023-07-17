@@ -3,12 +3,12 @@
 WITH
  SHL_Driver AS (
       SELECT
-        SHL_MID,
-        SHL_SID,
-        SHL_DriverLicense_Number,
-        SHL_Driver_Name,
+        MID,
+        SID,
+        License_Number,
+        Driver_Name,
         Status_Code,
-        SHL_Expiration_Date
+        Expiration_Date
       FROM
         data-engineering-learn.dbtcore_project.SHL_Driver
         ),
@@ -62,7 +62,7 @@ WITH
         POINT_OF_IMPACT,
         VEHICLE_DAMAGE,
         VEHICLE_DAMAGE_1
-      data-engineering-learn.dbtcore_project.MotorVehicleCollision
+      from `dbtcore_project.Crash_Report`
      ),
 FieldTrip AS (
       SELECT
@@ -95,7 +95,7 @@ VisionZeroBase as
         _1st_Inspection_DMV_Facility_Inspection_Month,
         _2nd_Inspection_Scheduled_Date,
         _3rd_Inspection_Scheduled_Date,
-        _2nd_InspectionDate
+        _2ndInspectionDate
         FleetAgentCode,
         AgentName as VehicleIns_VENDOR_NAME
     
@@ -104,7 +104,7 @@ VisionZeroBase as
   ),
  final as (
         select * from SHL_Driver S
-        inner join MedallianDriver_Active ma on s.SHL_MID=ma.mid
+        inner join MedallianDriver_Active ma on s.MID=ma.mid
         inner join FleetInfo f on f.FI_MID=ma.MID
         inner join Crash_Report C on c.CrashReport_FID = f.FID
         inner join VisionZeroBase VZ on VZ.VZID=C.Crash_Report_VZID
