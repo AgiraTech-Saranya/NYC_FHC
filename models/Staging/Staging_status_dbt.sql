@@ -5,10 +5,10 @@ WITH
       SELECT
         MID as SHL_MID,
         SID,
-        License_Number,
+        License_Number as  SHL_DriverLicense_Number,
         Driver_Name as SHL_DriverName,
         Status_Code,
-        Expiration_Date
+        Expiration_Date as SHL_DriverExpirationDate
       FROM
         data-engineering-learn.dbtcore_project.SHL_Driver
         ),
