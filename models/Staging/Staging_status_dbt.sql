@@ -3,7 +3,7 @@
 WITH
  SHL_Driver AS (
       SELECT
-        MID,
+        MID as SHL_MID,
         SID,
         License_Number,
         Driver_Name,
