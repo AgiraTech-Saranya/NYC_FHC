@@ -104,7 +104,7 @@ VisionZeroBase as
   ),
  final as (
         select * from SHL_Driver S
-        inner join MedallianDriver_Active ma on s.MID=ma.mid
+        inner join MedallianDriver_Active ma on s.SHL_MID=ma.mid
         inner join FleetInfo f on f.FI_MID=ma.MID
         inner join Crash_Report C on c.CrashReport_FID = f.FID
         inner join VisionZeroBase VZ on VZ.VZID=C.Crash_Report_VZID
