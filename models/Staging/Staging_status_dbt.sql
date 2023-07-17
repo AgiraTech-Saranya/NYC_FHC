@@ -6,7 +6,7 @@ WITH
         MID as SHL_MID,
         SID,
         License_Number,
-        Driver_Name,
+        Driver_Name as SHL_DriverName,
         Status_Code,
         Expiration_Date
       FROM
