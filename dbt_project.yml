@@ -38,6 +38,7 @@ models:
       materialized: view
     Staging:
       materialized: table
+    
     Transforming:
      materialized: view
     Loading:
