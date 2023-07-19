@@ -1,5 +1,3 @@
-﻿-- Models\Staging folder\Crash_Report.sql
-
 With  Crash_Report AS (
       SELECT
         FID as CrashReport_FID,
@@ -11,7 +9,7 @@ With  Crash_Report AS (
         BIC_PLATE_NUMBER as CrashReport_BIC_PlateNumber,
         STATE_REGISTRATION,
         VEHICLE_MAKE,
-        VEHICLE_MODEL as Crashreport_VehicleModel,
+        VEHICLE_MODEL as CR_VehicleModel,
         VEHICLE_TYPE,
         VEHICLE_YEAR as Crashreport_Vehicleyear,
         TRAVEL_DIRECTION,
@@ -24,6 +22,6 @@ With  Crash_Report AS (
         POINT_OF_IMPACT,
         VEHICLE_DAMAGE,
         VEHICLE_DAMAGE_1
-      FROM data-engineering-learn.dbtcore_project.MotorVehicleCollision
+      FROM dbtcore_project.Crash_Report
      )
-Select * from Crash_Report
+Select * from Crash_Report;
