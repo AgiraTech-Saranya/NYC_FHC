@@ -24,4 +24,4 @@ With  Crash_Report AS (
         VEHICLE_DAMAGE_1
       FROM dbtcore_project.Crash_Report
      )
-Select * from Crash_Report;
+Select * from Crash_Report

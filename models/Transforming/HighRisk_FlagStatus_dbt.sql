@@ -53,7 +53,7 @@ select fleet.FI_MID
 		   else 0
 		   end as LastTripDate_Status
 
-	,case when VI._2nd_InspectionDate >= Date_Add(Current_Date(),interval -4 month) 
+	,case when VI._2ndInspectionDate >= Date_Add(Current_Date(),interval -4 month) 
 	      then 1
 	      else 0
 	      end as VehicleInspectionStatus
@@ -62,8 +62,8 @@ select fleet.FI_MID
  inner join MedallDrvier on MedallDrvier.MID = SHL.SHL_MID
  inner join fleet on fleet.FI_MID = MedallDrvier.MID
  inner join Crash on Crash.CrashReport_FID = fleet.FID
- inner join VisionZero VZ on VZ.VZID=Crash.Crash_Report_VZID
- inner join FieldTr FT on FT.FieldTrip_VZID = VZ.VZID
+ inner join VisionZero VZ on VZ.Vision_VZID=Crash.Crash_Report_VZID
+ inner join FieldTr FT on FT.FieldTrip_VZID = VZ.Vision_VZID
  inner join VehicleInspec VI on VI.VehicleIns_MID = MedallDrvier.MID 
 )
 

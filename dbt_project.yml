@@ -41,7 +41,7 @@ models:
         +materialized: table
     Transforming:
         +schema: "dbt_agiratechsaranya"
-        +materialized: view
+        +materialized: table
     Loading:
         +schema: "NYC_FHT_VehicleInsurance"
         +materialized: view 
