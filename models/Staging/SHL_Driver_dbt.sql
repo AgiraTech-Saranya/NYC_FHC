@@ -10,6 +10,6 @@ WITH
         Status_Code as SHL_StatusCode,
         Expiration_Date as SHL_Expiration_Date
       FROM
-        data-engineering-learn.dbtcore_project.SHL_Driver
+        `data-engineering-learn.dbtcore_project.SHLDriverData`
         )
 select * from SHL_Driver

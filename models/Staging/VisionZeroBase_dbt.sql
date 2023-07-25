@@ -14,6 +14,6 @@ With VisionZeroBase as
       Base_Provides_Safety_Training
 
     from 
-      data-engineering-learn.dbtcore_project.VisionZeroBase
+      `data-engineering-learn.dbtcore_project.VisionZeroBase`
   )
 select * from VisionZeroBase

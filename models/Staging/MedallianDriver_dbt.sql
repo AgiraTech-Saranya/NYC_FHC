@@ -5,10 +5,10 @@ With MedallianDriver_Active AS (
         MID,
         License_Number AS DriverLicense_Number,
         Name AS Driver_Name,
-        Expiration_Date,
+        replace(Expiration_Date,'/','-') as Expiration_Date,
         Type
       FROM
-        data-engineering-learn.dbtcore_project.MedallianDriver_active 
+        `data-engineering-learn.dbtcore_project.MedallianActiveDriver`
         )
         
 Select * from MedallianDriver_Active
