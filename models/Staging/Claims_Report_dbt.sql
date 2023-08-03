@@ -5,11 +5,14 @@ With InsuranceClaims_Report as
 ,   MVC_ID	
 ,   CLAIM__	
 ,   BOROUGH	
-,   parse_date('%m-%d-%Y',(replace(OCCURRENCE_DATE,'/','-'))) as OCCURRENCE_DATE		
-,   parse_date('%m-%d-%Y',(replace(FILED_DATE,'/','-'))) as FILED_DATE		
+,   OCCURRENCE_DATE
+--,   parse_date('%m-%d-%Y',(replace(OCCURRENCE_DATE,'/','-'))) as OCCURRENCE_DATE		
+--,   parse_date('%m-%d-%Y',(replace(FILED_DATE,'/','-'))) as FILED_DATE	
+,   FILED_DATE	
 ,   CLAIM_TYPE		
 ,   MOTORCOLLISION_ID		
-,   parse_date('%m-%d-%Y',(replace(DISPOSITION_DATE,'/','-'))) as DISPOSITION_DATE		
+--,   parse_date('%m-%d-%Y',(replace(DISPOSITION_DATE,'/','-'))) as DISPOSITION_DATE
+,   DISPOSITION_DATE		
 ,   DISPOSITION_AMOUNT	
 ,   AGENCY		
 ,   CLAIM_ACTION		

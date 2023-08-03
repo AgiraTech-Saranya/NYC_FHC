@@ -6,6 +6,10 @@ name: 'dbtcore_projectdemo'
 version: '1.0.0'
 config-version: 2
 
+vars:
+    DriverLicenceNumber: 497161
+    BIC_PlateNumber: 'R09978'
+
 # This setting configures which "profile" dbt uses for this project.
 profile: 'default'
 
